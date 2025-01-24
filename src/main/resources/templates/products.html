@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Products</title>
+</head>
+<body>
+<h1>Products</h1>
+<img src="/static/images/ecommerce.jpg" alt="Product Image" />
+<ul>
+    <li th:each="product : ${products}">
+        <p th:text="|${product.name} - $${product.price}|"></p>
+    </li>
+</ul>
+</body>
+</html>
